@@ -20,7 +20,7 @@ $ python patrons_extractor.py
 
 ## Authors
 
-- Masashi Shibata <contact@c-bata.link>
+- Masashi Shibata: @c-bata
 
 
 ## LICENSE
