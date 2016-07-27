@@ -72,16 +72,12 @@ def _extract_social_url(social_urls, service_domain):
 def _parse_patron_soup(patron_soup):
     social_soups = patron_soup.find('td', attrs={'class': 'social'}).find_all('a')
     social_urls = [x.get('href') for x in social_soups]
-    twitter_url = _extract_social_url(social_urls, 'twitter')
-    facebook_url = _extract_social_url(social_urls, 'facebook')
-    github_url = _extract_social_url(social_urls, 'github')
-
     return {
         'name': patron_soup.find('p', attrs={'class': 'display_name'}).a.text,
         'icon': patron_soup.find('a', attrs={'class': 'image_link'}).img.get('src'),
-        'twitter': twitter_url,
-        'facebook': facebook_url,
-        'github': github_url,
+        'twitter': _extract_social_url(social_urls, 'twitter'),
+        'facebook': _extract_social_url(social_urls, 'facebook'),
+        'github': _extract_social_url(social_urls, 'github'),
     }
 
 
@@ -95,5 +91,5 @@ if __name__ == '__main__':
         patrons.append(_parse_patron_soup(patron_soup))
 
     template = Template(PATRON_TEMPLATE)
-    patron_html = template.render(patrons=patrons, break_line_size=LINE_BREAK_SIZE)
-    print(patron_html)
+    patron_rst = template.render(patrons=patrons, break_line_size=LINE_BREAK_SIZE)
+    print(patron_rst)
