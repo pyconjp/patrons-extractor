@@ -3,6 +3,7 @@ from jinja2 import Template
 from bs4 import BeautifulSoup
 
 
+LINE_BREAK_SIZE = 5
 PARTICIPANTS_PAGE_URL = 'http://pyconjp.connpass.com/event/30692/participation/'
 PATRON_TEMPLATE = """
 ====================
@@ -42,7 +43,7 @@ Patronスポンサー
                    </div>
                </div>
            </div>
-           {% if loop.index % break_line_limit == 0 %}</div><div style="display: table-row; width: 100%;">{% endif %}
+           {% if loop.index % break_line_size == 0 %}</div><div style="display: table-row; width: 100%;">{% endif %}
         {% endfor %}
         </div>
    </div>
@@ -94,5 +95,5 @@ if __name__ == '__main__':
         patrons.append(_parse_patron_soup(patron_soup))
 
     template = Template(PATRON_TEMPLATE)
-    patron_html = template.render(patrons=patrons, break_line_limit=5)
+    patron_html = template.render(patrons=patrons, break_line_size=LINE_BREAK_SIZE)
     print(patron_html)
