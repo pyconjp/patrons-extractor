@@ -6,6 +6,7 @@ connpassのイベントページから、Patronの一覧を抽出してreStructu
 出力したものをPyCon JP Websiteのページに貼り付けるとPatron Sponsorの一覧を以下のページのように出力出来ます。
 
 - [Patronスポンサー | PyCon JP 2015 in Tokyo](https://pycon.jp/2015/ja/sponsors/patrons/)
+- [Patronスポンサー | PyCon JP 2016 in Tokyo](https://pycon.jp/2016/ja/sponsors/patrons/)
 
 
 ## How to run
