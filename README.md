@@ -7,6 +7,7 @@ connpassのイベントページから、Patronの一覧を抽出してreStructu
 
 - [Patronスポンサー | PyCon JP 2015 in Tokyo](https://pycon.jp/2015/ja/sponsors/patrons/)
 - [Patronスポンサー | PyCon JP 2016 in Tokyo](https://pycon.jp/2016/ja/sponsors/patrons/)
+- [Patronスポンサー | PyCon JP 2017 in Tokyo](https://pycon.jp/2017/ja/sponsors/patrons/)
 
 
 ## How to run
