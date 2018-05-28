@@ -19,6 +19,9 @@ $ pip install -r requirements.txt -c constraints.txt
 $ python patrons_extractor.py
 ```
 
+デフォルトでは [PyCon JP 2016 のスポンサー一覧ページ](https://pyconjp.connpass.com/event/30692/participation/) が生成されます。
+別の年に変わった際は、connpassの「イベント参加者・申込者一覧」ページを開き、 `patrons_extractor.py` 内の `PARTICIPANTS_PAGE_URL` を書き換えてください。
+
 
 ## Authors
 
